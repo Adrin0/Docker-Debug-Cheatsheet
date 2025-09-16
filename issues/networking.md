@@ -34,7 +34,7 @@ If containers can't resolve domain names:
 ```bash
 docker run busybox nslookup google.com
 ```
-* If it fails, add DNS to ```etc/docker/daemon.json```
+* If it fails, add DNS to `etc/docker/daemon.json`
 ```json
 {
   "dns": ["8.8.8.8", "8.8.4.4"]
@@ -48,3 +48,9 @@ docker network create mynet
 docker run -d --name web --network mynet nginx
 docker run -it --network mynet busybox ping web
 ```
+
+---
+
+## Pro Tips
+* Use `docker exec -it <container> sh`to debug networking inside the container
+* Prefer user-defined networks instead of the default `bridge`

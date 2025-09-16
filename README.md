@@ -5,7 +5,7 @@ This repository is designed to help developers, sysadmins, and cybersecurity pro
 
 ---
 
-## 📖 Table of Contents
+## Table of Contents
 - [Overview](#overview)
 - [Who Is This For?](#who-is-this-for)
 - [Common Issues Covered](#common-issues-covered)
@@ -17,13 +17,13 @@ This repository is designed to help developers, sysadmins, and cybersecurity pro
 
 ---
 
-## 🔍 Overview
+## Overview
 Docker is powerful, but troubleshooting containerized environments can be challenging.  
 This guide provides **step-by-step solutions, commands, and diagnostic checklists** for common Docker issues, ranging from networking problems to misconfigured volumes.
 
 ---
 
-## 👤 Who Is This For?
+## Who Is This For?
 - Developers deploying apps in Docker
 - Security analysts testing apps in containerized labs
 - Students or beginners learning Docker basics
@@ -31,7 +31,7 @@ This guide provides **step-by-step solutions, commands, and diagnostic checklist
 
 ---
 
-## 🛠️ Common Issues Covered
+## Common Issues Covered
 - Container won’t start or exits immediately
 - Port mapping and networking issues
 - Volume mounting errors
@@ -43,9 +43,54 @@ This guide provides **step-by-step solutions, commands, and diagnostic checklist
 
 ---
 
-## ⚡ Quick Start
+## Quick Start
 Clone the repo and navigate into it:
 
 ```bash
 git clone https://github.com/<your-username>/docker-troubleshooting-guide.git
 cd docker-troubleshooting-guide
+```
+Browse the ```issues/``` directory for categorized troubleshooting guides:
+```bash
+ls issues/
+networking.md
+volumes.md
+daemon.md
+permissions.md
+```
+
+## Troubleshooting Workflow
+1. Identify the problem
+    Use ```docker ps```, ```docker logs <container>``` and ```docker inspect``` to gather info
+2. Check known issues
+    Refer to the appropriate file in the ```issues/``` directory
+3. Apply solutions
+    Follow provided commands and steps to resolve.
+4. Verify
+    Restart the container and confirm functionality.
+
+## Repo Structure
+```lua
+docker-troubleshooting-guide/
+├── issues/
+│   ├── networking.md
+│   ├── volumes.md
+│   ├── daemon.md
+│   └── permissions.md
+├── examples/
+│   └── debug-commands.md
+├── README.md
+└── CONTRIBUTING.md
+```
+
+## Contributing
+Contributions are welcome!
+If you’ve solved a Docker issue not yet covered here:
+1. Fork the repo
+2. Create a new branch
+3. Add your troubleshooting guide in the issues/ folder
+4. Submit a pull request
+
+## License
+This project is licensed under the MIT License.
+Feel free to use, share, and modify.
